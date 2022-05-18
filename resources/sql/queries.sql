@@ -8,6 +8,11 @@ values (:question_text)
 -- :doc retrieves all questions
 select * from question
 
+-- :name question-name :? :1
+-- :doc retrieves the name and id for a question
+select id, question_text from question
+where id = :id
+
 -- :name create-choice! :! :n
 -- :doc creates a choice
 insert into choice
